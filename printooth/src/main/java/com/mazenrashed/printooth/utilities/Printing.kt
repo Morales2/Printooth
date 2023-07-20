@@ -86,4 +86,8 @@ class Printing(private var printer: Printer, private var pairedPrinter: PairedPr
         bluetooth.onStart()
         if (!bluetooth.isEnabled) bluetooth.enable() else bluetooth.connectToAddress(pairedPrinter.address)
     }
+
+    fun clearPrintables() {
+        printables = emptyList()
+    }
 }
